@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon  node ./bin/www",
+    "start": "node ./bin/www",
     "inspect": "node --inspect-brk ./bin/www",
     "build": "cd BitsClient && npm install && npm run build",
     "client": "cd BitsClient && npm start",
     "server": "node ./bin/www",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "dev": "concurrently --kill-others-on-fail \"npm run inspect\" \"npm run client\""
   },
   "engines": {
     "node": "v14.15.4"
@@ -16,6 +16,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "disconnect": "^1.2.2",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",

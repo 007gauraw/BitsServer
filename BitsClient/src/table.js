@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Table({ releasesData, headerConfig }) {
+export default function Table({ releasesData, headerConfig, onSearch }) {
   return (
     <div className="Table">
       <input
@@ -8,6 +8,7 @@ export default function Table({ releasesData, headerConfig }) {
         id="myInput"
         placeholder="Search for names.."
         title="Type in a name"
+        onChange={onSearch}
       ></input>
       <table id="myTable">
         <tbody>
