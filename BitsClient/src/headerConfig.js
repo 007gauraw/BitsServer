@@ -1,13 +1,19 @@
 const config = [
   {
+    name: "Thumbnails",
+    keyValue: "thumb",
+    width: "10%",
+    type: "img",
+  },
+  {
     name: "Label",
     keyValue: "label",
-    width: "30%",
+    width: "25%",
   },
   {
     name: "Title",
     keyValue: "title",
-    width: "30%",
+    width: "25%",
   },
   {
     name: "Track Info",

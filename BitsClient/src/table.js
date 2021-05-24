@@ -14,20 +14,20 @@ export default function Table({ releasesData, headerConfig, onSearch }) {
         <tbody>
           <tr className="header">
             {headerConfig.map((header, headerIndex) => {
-              return (
-                <th
-                  key={`header_${headerIndex}`}
-                  style={{ width: header.width }}
-                >
-                  {header.name}
-                </th>
-              );
+              return <th key={`header_${headerIndex}`}>{header.name}</th>;
             })}
           </tr>
           {releasesData.map((song, index) => {
             return (
               <tr key={`songs_${index}`}>
                 {headerConfig.map((header, hindex) => {
+                  if (header.type === "img") {
+                    return (
+                      <td key={`dataIndex_${hindex}`}>
+                        {<img src={song[header.keyValue]}></img>}
+                      </td>
+                    );
+                  }
                   return (
                     <td key={`dataIndex_${hindex}`}>{song[header.keyValue]}</td>
                   );

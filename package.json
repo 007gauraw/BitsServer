@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "inspect": "node --inspect-brk ./bin/www",
+    "inspect": "nodemon node --inspect-brk ./bin/www",
     "build": "cd BitsClient && npm install && npm run build",
     "client": "cd BitsClient && npm start",
     "server": "node ./bin/www",
