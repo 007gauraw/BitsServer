@@ -16,7 +16,7 @@ router.get("/releses", function (req, res, next) {
 });
 
 router.get("/", function (req, res, next) {
-  // Just work around to achive the scope of the task
+  // Just work around to achieve the scope of the task
   // Better approch will be let the user select artist from the given list
   // and than show the relese instead of results[0].id :)
   db.search(req.query.search, {
